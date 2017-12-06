@@ -47,7 +47,6 @@ function animate(){
 function makeVehicle(num){
 
   for(var i = 0; i < num; i++){
-    vehicles.push(new Vehicle(new JSVector(window.innerWidth/2, window.innerHeight/2)));
+    vehicles.push(new vehicle(new JSVector(window.innerWidth/2, window.innerHeight/2)));
   }
-    console.log(vehicles.length);
 }

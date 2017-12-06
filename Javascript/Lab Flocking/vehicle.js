@@ -1,6 +1,6 @@
 'use strict'
 
-function Vehicle(loc){
+function vehicle(loc){
   this.loc = loc;
   this.maxSpeed = 5;
   this.vel = new JSVector(Math.random()*3-1.5, Math.random()*3-1.5);
@@ -47,7 +47,7 @@ function Vehicle(loc){
   this.sepperate = function(targets){
     var sum = new JSVector();
     var count = 0;
-    for(var i=0; i < targets.length(); i++){
+    for(var i=0; i < targets.length; i++){
       var distance = JSVector.subGetNew(this.loc,targets[i].loc);
       if((distance > 0) && (d < 50)){
         var diff = JSVector.subGetNew(this.loc,targets[i].loc);
@@ -63,3 +63,4 @@ function Vehicle(loc){
     this.applyForce(steer);
     }
   }
+}
