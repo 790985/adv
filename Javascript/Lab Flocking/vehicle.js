@@ -58,5 +58,8 @@ function Vehicle(loc){
     }
     if(count > 0){
     sum.div(count);
+    sum.setMag(maxSpeed);
+    var steer = JSVector.subGetNew(sum,vel);
+    this.applyForce(steer);
     }
   }
