@@ -54,7 +54,7 @@ JSVector.prototype.limit = function(mag){
 	this.setMag(mag);
   }
 }
-JSVector.prototype.distance = function(vector){
+JSVector.prototype.getDistance = function(vector){
   return this.subGetNew(this.getMag(),vector.getMag());
 }
 //}
