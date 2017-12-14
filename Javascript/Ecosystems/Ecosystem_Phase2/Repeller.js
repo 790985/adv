@@ -13,6 +13,8 @@ Mover.prototype.update = function(){
   if(this.loc.y >= window.innerHeight || this.loc.y <= 0){
     this.vel.y *= -1;
   }
+  for(var i = 0; i < )
+  if(this.loc.getDistance())
   this.render();
 }
 
