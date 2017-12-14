@@ -14,11 +14,14 @@ Attractor.prototype.update = function(){
   if(this.loc.y >= window.innerHeight || this.loc.y <= 0){
     this.vel.y *= -1;
   }
-  for(i = 0; i > movers.length; i++){
-  if(this.loc.x  + 50 >= movers[i].loc.x || this.loc.y  + 50 >= movers[i].loc.y){
-    movers[i].vel = new JSVector(movers[i].vel.x * -1,movers[i].vel.y * -1)
+   for(var i = 0; i < movers.length; i++){
+  var d = this.loc.getDistance(movers[i].loc);
+  if(d > 5){
+    var force = this.loc.subGetNew(movers[i].loc);
+    force.mult(d);
+    movers.acc.add(force);
   }
-}
+  }
   this.render();
 }
 
