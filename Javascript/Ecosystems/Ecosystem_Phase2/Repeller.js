@@ -6,7 +6,7 @@ function Mover(loc, vel, acc, len){
   this.clr = "rgb(" + Math.floor(Math.random() * (255 - 0 + 1))+","+Math.floor(Math.random()*(255-0+1))+","+Math.floor(Math.random()*(255 - 0 + 1)) + ")";
 }
 Mover.prototype.update = function(){
-  this.loc.add(this.vel);
+  this.vel.add(this.acc);
   if(this.loc.x >= window.innerWidth || this.loc.x <=0){
     this.vel.x *= -1;
   }
